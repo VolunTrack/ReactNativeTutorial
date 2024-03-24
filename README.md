@@ -4,7 +4,7 @@ Welcome to the repository for our React Native Course! This course is designed t
 
 ## Projects
 
-This course includes several hands-on projects designed to reinforce the concepts learned in each section. Here is a list of projects you'll work on:
+This course will includes several hands-on projects designed to reinforce the concepts learned in each section. Here is a list of projects you'll work on:
 
 - **Project 1:** Simple React Native Counter App.
 - **Project 2:** To-Do List App.
