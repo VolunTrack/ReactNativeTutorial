@@ -1,0 +1,29 @@
+{
+	"folders": [
+		{
+			"path": ".expo"
+		},
+		{
+			"path": "android"
+		},
+		{
+			"path": "ios"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "src"
+		},
+		{
+			"path": "src/BasicComponents"
+		},
+		{
+			"path": "src/BasicConcept"
+		},
+		{
+			"path": "src/Variables"
+		}
+	],
+	"settings": {}
+}
