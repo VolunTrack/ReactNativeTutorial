@@ -1,30 +1,30 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import Variables from './src/Variables/Variable';
-import Example from './src/BasicComponents/Example';
-import Image from './src/BasicComponents/Image';
-import Text from './src/BasicComponents/Text';
-import View from './src/BasicComponents/View';
-import TextInput from './src/BasicComponents/TextInput';
-import CustomComponent from './src/BasicConcept/CustomComponent';
-import States from './src/BasicConcept/States';
+import TouchablesDemo from './src/CoreComponents/TouchablesDemo';
+import ButtonDemo from './src/CoreComponents/ButtonDemo';
+import ScrollViewDemo from './src/CoreComponents/ScrollViewDemo';
+import FlatListDemo from './src/CoreComponents/FlatListDemo';
+import StackNavigator from './src/Navigator/StackNavigator';
+import TabNavigator from './src/Navigator/TabNavigator';
+import DrawerNavigator from './src/Navigator/DrawerNavigator';
+import Context from './src/Navigator/Context';
 
 const Stack = createStackNavigator();
 
 function App() {
   return (
     <NavigationContainer>
-      <Stack.Navigator initialRouteName="state">
-        <Stack.Screen name="variables" component={Variables} />
-        <Stack.Screen name="example" component={Example} />
-        <Stack.Screen name="image" component={Image} />
-        <Stack.Screen name="text" component={Text} />
-        <Stack.Screen name="view" component={View} />
-        <Stack.Screen name="textInput" component={TextInput} />
-        <Stack.Screen name="customComponent" component={CustomComponent} />
-        <Stack.Screen name="state" component={States} />
+      <Stack.Navigator initialRouteName="Context">
+        <Stack.Screen name="ButtonDemo" component={ButtonDemo} />
+        <Stack.Screen name="TouchablesDemo" component={TouchablesDemo} />
+        <Stack.Screen name="ScrollViewDemo" component={ScrollViewDemo} />
+        <Stack.Screen name="FlatListDemo" component={FlatListDemo} />
 
+        <Stack.Screen name="StackNavigator" component={StackNavigator} />
+        <Stack.Screen name="TabNavigator" component={TabNavigator} />
+        <Stack.Screen name="DrawerNavigator" component={DrawerNavigator} />
+        <Stack.Screen name="Context" component={Context} />
       </Stack.Navigator>
     </NavigationContainer>
   );
