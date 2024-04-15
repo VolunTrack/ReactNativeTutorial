@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   Button,
@@ -8,10 +8,17 @@ import {
   Alert,
 } from 'react-native';
 
+/*
+Button：简单的点击组件，用于执行操作，如保存编辑后的用户资料。
+Button的onPress属性允许我们定义点击后的行为，如提交数据或导航到其他屏幕。
+用法: <Button properties={functions} /> 
+*/
+
 export default function ButtonDemo() {
 
-  // 分隔符组件，用于在视觉上分隔不同的按钮示例
   const Separator = () => <View style={styles.separator} />;
+  const [isDisabled, setDisabled] = useState(false);
+  // [当前状态的值, 更新状态的函数] = useState(状态的初始值)
 
   return (
     <SafeAreaView style={styles.container}>
@@ -21,19 +28,19 @@ export default function ButtonDemo() {
         </Text>
           {/* 简单的按钮，展示如何处理点击事件 */}
         <Button
-          title="Press me"
+          title="Press me!!"
           onPress={() => Alert.alert('Simple Button pressed')}
         />
       </View>
       <Separator />
       <View>
         <Text style={styles.title}>
-          在每个平台上以看起来标准的方式调整颜色。在iOS上，color属性控制文本的颜色。在Android上，color调整按钮的背景色。
+          在每个平台上以看起来标准的方式调整颜色。在iOS上, color属性控制文本的颜色。在Android上, color调整按钮的背景色。
         </Text>
          {/* 带有颜色调整的按钮 */}
         <Button
-          title="Press me"
-          color="#f194ff"
+          title="Press me!!!!!!!"
+          color="#f194ff" 
           onPress={() => Alert.alert('Button with adjusted color pressed')}
         />
       </View>
@@ -45,27 +52,11 @@ export default function ButtonDemo() {
         {/* 被禁用的按钮，无法进行交互 */}
         <Button
           title="Press me"
-          disabled
-          onPress={() => Alert.alert('Cannot press this one')}
+          disabled={isDisabled}
+          onPress={() => setDisabled(true)}
         />
       </View>
-      <Separator />
-      <View>
-        <Text style={styles.title}>
-          这种布局策略让标题定义按钮的宽度。
-        </Text>
-         {/* 水平方向上并排放置的两个按钮 */}
-        <View style={styles.fixToText}>
-          <Button
-            title="Left button"
-            onPress={() => Alert.alert('Left button pressed')}
-          />
-          <Button
-            title="Right button"
-            onPress={() => Alert.alert('Right button pressed')}
-          />
-        </View>
-      </View>
+      
     </SafeAreaView>
   );
 };
@@ -80,10 +71,6 @@ const styles = StyleSheet.create({
   title: {
     textAlign: 'center',
     marginVertical: 8,
-  },
-  fixToText: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
   },
   separator: {
     marginVertical: 8,
