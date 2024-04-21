@@ -4,9 +4,7 @@ import { View, Text, Button, StyleSheet, Dimensions } from 'react-native';
 
 // 获取设备屏幕的宽度和高度
 const { width, height } = Dimensions.get('window');
-
-
-
+//123
 // 定义样式
 const styles = StyleSheet.create({
   container: {
