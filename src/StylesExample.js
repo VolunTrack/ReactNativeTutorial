@@ -4,7 +4,7 @@ import { View, Text, Button, StyleSheet, Dimensions } from 'react-native';
 
 // 获取设备屏幕的宽度和高度
 const { width, height } = Dimensions.get('window');
-//123
+
 // 定义样式
 const styles = StyleSheet.create({
   container: {
@@ -33,7 +33,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center', // 内部元素垂直居中
     alignItems: 'center', // 内部元素水平居中
     marginBottom: 20, 
-    borderRadius: 5, // 边框圆角
+    borderRadius: 10, // 边框圆角
 
     // 阴影
     // android: 

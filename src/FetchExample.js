@@ -35,7 +35,7 @@ Async/Await 方法
 可读性：async/await使代码看起来更像是同步代码，提高了代码的可读性和维护性，特别是在涉及多个连续异步操作时。
 
 控制流：虽然async/await在处理单个异步操作时非常直观，但在需要并行处理多个异步操作时，可能需要回退到使用Promise API（如Promise.all()）。
-使用场景
+
 
 Summary: 
 Promise-based：当你需要更细粒度的错误处理或者处理不直接依赖彼此的多个异步操作时，使用Promise可能更合适。
@@ -58,10 +58,6 @@ const fetchWeatherData = () => {
       
       // 使用.json()解析响应体中的JSON数据
       return response.json();
-    })
-    .then(json => {
-      // 返回解析后的数据
-      return json;
     })
 
     // 使用 .catch() 方法来处理Rejected状态的错误
@@ -107,6 +103,7 @@ const WeatherApp = () => {
 
       // 当数据成功返回后，使用setWeatherData更新组件状态weatherData
       setWeatherData(data);
+      console.log(data);
 
       // 同时将loading状态设置为false，表示数据加载完成
       setLoading(false);
